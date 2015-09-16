@@ -5,6 +5,9 @@
 
 **Telegram Mobile Protocol** [(MTProto)](https://core.telegram.org/mtproto) unofficial library in pure **javascript** on the Node.js platform
 
+## About that fork
+My fork is 99% same as [parent repo](https://github.com/enricostara/telegram-mt-node) but it does not use `requirish` module which fails to work with `browserify` and `babelify`.
+
 ## About MTProto..
 
 **MTProto** is the [Telegram Messenger](http://www.telegram.org ) protocol 
