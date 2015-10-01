@@ -31,5 +31,22 @@ describe('auth', function () {
                 }, channel);
             });
         });
+        it('should returns AuthKey using a WebSocket connection', function (done) {
+            var connection = new net.WsConnection(primaryDC);
+            connection.connect(function () {
+                var channel = new net.RpcChannel(connection);
+                auth.createAuthKey(function (ex, auth) {
+                    if (ex) {
+                        console.log('Auth key KO: %s', ex);
+                    } else {
+                        auth.key.should.be.ok;
+                        auth.serverSalt.should.be.ok;
+                        console.log('Auth key OK: %s', auth.toPrintable());
+                    }
+                    (!ex).should.be.true;
+                    connection.close(done);
+                }, channel);
+            });
+        });
     });
 });
