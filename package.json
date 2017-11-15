@@ -28,7 +28,7 @@
     "node-cryptojs-aes": "enricostara/node-cryptojs-aes",
     "requirish": "latest",
     "telegram-tl-node": "latest",
-    "ws": "^0.8.0"
+    "ws": "^1.1.5"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "latest",
